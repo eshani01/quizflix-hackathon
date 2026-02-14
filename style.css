@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    background-color: #0f0f0f;
+    transition: transform 1s ease-in-out;
+}
+
+.landing {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo {
+    color: #e50914;
+    font-size: 15rem;
+    transition: transform 1s ease-in-out;
+    transform-origin: center;
+    margin-bottom: 0px;
+    padding: 0;
+    line-height: 1;
+    font-family: 'Poppins', sans-serif;
+}
+
+.tagline {
+    color: white;
+    font-size: 2rem;
+    margin-top: 0px;
+    transition: opacity 0.6s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+}
+
+.zoom {
+    transform: scale(20);
+    transition: transform 1s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+}
