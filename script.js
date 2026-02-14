@@ -1,3 +1,4 @@
+// index.html
 const landing = document.getElementById("landing");
 const logo = document.getElementById("logo");
 const tagline = document.getElementById("tagline");
@@ -15,3 +16,4 @@ landing.addEventListener("click", function () {
         window.location.href = "login.html";
     }, 900);
 });
+
