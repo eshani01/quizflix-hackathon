@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quizflix - Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Background -->
+    <div class="background"></div>
+    <div class="overlay"></div>
+
+    <!-- Main Content -->
+    <div class="dashboard">
+
+        <h1 class="logo">QUIZFLIX</h1>
+        <h2 class="title">Your Courses</h2>
+
+        <div class="course-grid">
+
+            <div class="course-card" data-link="biochemistry.html">
+                <div class="avatar bio">BIO</div>
+                <p>Biochemistry</p>
+            </div>
+
+            <div class="course-card" data-link="dsa.html">
+                <div class="avatar dsa">DSA</div>
+                <p>DSA</p>
+            </div>
+
+            <div class="course-card" data-link="dbms.html">
+                <div class="avatar dbms">DB</div>
+                <p>DBMS</p>
+            </div>
+
+            <div class="course-card" data-link="psychology.html">
+                <div class="avatar psy">PSY</div>
+                <p>Psychology</p>
+            </div>
+
+            <div class="course-card edit-card" id="editBtn">
+                <div class="avatar edit-icon">✏️</div>
+                <p>Edit</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Avatar Edit Popup -->
+    <div class="edit-overlay" id="editOverlay">
+        <div class="edit-box">
+            <h3>Select Avatar Color</h3>
+
+            <div class="avatar-options">
+                <div class="avatar-option red"></div>
+                <div class="avatar-option blue"></div>
+                <div class="avatar-option green"></div>
+                <div class="avatar-option purple"></div>
+            </div>
+
+            <button id="closeEdit">Done</button>
+        </div>
+    </div>
+
+    <!-- Edit Avatar -->
+    <div class="avatar-editor" id="avatarEditor">
+    <h3>Select Avatar Color</h3>
+
+    <div class="avatar-options">
+        <div class="avatar-option red"></div>
+        <div class="avatar-option blue"></div>
+        <div class="avatar-option green"></div>
+        <div class="avatar-option purple"></div>
+    </div>
+
+    <button id="closeEditor">Done</button>
+</div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
