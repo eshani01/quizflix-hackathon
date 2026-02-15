@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quizflix - Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="quiz-container">
+
+    <div class="top-bar">
+        <h1 class="logo">QUIZFLIX</h1>
+        <div class="timer" id="timer">00:00</div>
+    </div>
+
+    <div class="question-section">
+        <h2 id="questionText">Question appears here</h2>
+    </div>
+
+    <div class="options" id="optionsContainer"></div>
+
+    <button id="nextBtn" class="next-btn">Next Episode</button>
+
+</div>
+
+<!-- Binge Mode Popup -->
+<div class="binge-popup" id="bingePopup">
+    🍿 BINGE MODE ACTIVATED 🔥
+</div>
+
+<!-- Leaderboard -->
+<div class="leaderboard" id="leaderboard">
+    <h2>Leaderboard (Temporary)</h2>
+    <p id="scoreDisplay"></p>
+</div>
+
+<script src="quiz.js"></script>
+</body>
+</html>

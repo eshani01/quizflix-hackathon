@@ -1,18 +1,37 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     const playBtn = document.querySelector(".play-btn");
-    const cards = document.querySelectorAll(".card");
+    const modal = document.getElementById("lessonModal");
+    const lessonPlay = document.querySelector(".play-lesson");
+    const mainContent = document.body;
 
+    // Open modal
     playBtn.addEventListener("click", function() {
-        alert("Starting Neutral Amino Acids Lesson...");
-        // Later replace with:
-        // window.location.href = "lesson.html";
+        modal.classList.add("active");
+        mainContent.classList.add("blur");
     });
 
-    cards.forEach(card => {
-        card.addEventListener("click", function() {
-            alert("Opening: " + card.innerText);
-        });
+    // Open modal from card
+    document.querySelectorAll(".card").forEach(card => {
+        if (card.innerText.includes("Neutral Amino Acids")) {
+            card.addEventListener("click", function() {
+                modal.classList.add("active");
+                mainContent.classList.add("blur");
+            });
+        }
+    });
+
+    // Final Play -> Redirect
+    lessonPlay.addEventListener("click", function() {
+        window.location.href = "quiz.html";
+    });
+
+    // Close modal if clicked outside
+    modal.addEventListener("click", function(e) {
+        if (e.target === modal) {
+            modal.classList.remove("active");
+            mainContent.classList.remove("blur");
+        }
     });
 
 });
