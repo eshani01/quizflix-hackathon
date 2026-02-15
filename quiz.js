@@ -24,6 +24,10 @@ let streak = 0;
 let timerInterval;
 let startTime;
 
+let bestStreak = 0;
+let totalTime = 0;
+let timeTaken = [];
+
 const questionText = document.getElementById("questionText");
 const optionsContainer = document.getElementById("optionsContainer");
 const nextBtn = document.getElementById("nextBtn");
@@ -41,6 +45,9 @@ function startTimer() {
 
 function stopTimer() {
     clearInterval(timerInterval);
+    let duration = (Date.now() - startTime) / 1000;
+    timeTaken.push(duration);
+    totalTime += duration;
 }
 
 function loadQuestion() {
@@ -86,6 +93,9 @@ function loadQuestion() {
 
     if (streak === 3) {
         alert("🍿 Binge Mode Activated!");
+        if (streak > bestStreak){
+            bestStreak = streak;
+        }
     }
 });
 
@@ -109,3 +119,4 @@ nextBtn.addEventListener("click", function () {
 loadQuestion();
 
 });
+
